@@ -1,0 +1,41 @@
+<ngx-spinner
+bdColor = "rgba(51, 51, 51, 0.8)"
+size = "large"
+color = "#fff"
+type = "ball-8bits"
+></ngx-spinner>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+        <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Invia</button>
+    </formly-form>
+</form>
+
+<ngx-chartjs [data]="chartData" type="bar"></ngx-chartjs>
+
+
+
+<ng-select [items]="people$ | async"
+  bindLabel="name"
+  bindValue="id"
+  [(ngModel)]="selectedPersonId">
+</ng-select>
+
+<app-child [btnName]="'mario'" (valueChange)='displayCounter($event)'></app-child>
+
+<h1>Input folder: {{inputFolder}}</h1>
+
+<button (click)="openDialog()" class="btn btn-danger btn-lg">openDialog</button>
+<button (click)="pdfStampa1()" class="btn btn-danger btn-lg">Test stampa</button>
+<button (click)="testLoop()" class="btn btn-danger btn-lg">Test loop</button>
+<button (click)="testMysql()" class="btn btn-danger btn-lg">Test Mysql</button>
+
+<table class="table table-striped bg-light">
+  <tbody *ngFor="let item of items">
+      <tr>
+          <td>
+            {{item}}
+          </td>
+        </tr>
+  </tbody>
+</table>

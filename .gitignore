@@ -1,26 +1,39 @@
-# compiled output
-dist/*
-electron.js
-
-# dependencies
 node_modules/*
+!node_modules/saml2-js/
 
-# ide
-.idea/*
+node_modules/saml2-js/*
+!node_modules/saml2-js/lib-js/
 
-# mac packager/installer
-mac_packager/*
-mac_installer/*
-electron-angular.dmg
-appdmg.json
-
-# windows packager/installer
-win_packager/*
-win_installer/*
-
-# linux packager/installer
-linux_packager/*
-linux_installer/*
-
-# miscellaneous
-npm-debug-log
+config
+token
+certs
+log
+tmp
+storage
+docs
+.idea
+.temp
+.sass-cache
+client/bower_components
+client/scripts/configuration.js
+client/dist
+client-raccomandate/bower_components
+client-raccomandate/node_modules
+client-raccomandate/scripts/configuration.js
+client-raccomandate/dist
+client-raccomandate-angular-electron/bower_components
+client-raccomandate-angular-electron/node_modules
+client-raccomandate-angular-electron/release
+client-raccomandate-angular-electron/dist
+client-istanze/dist
+client-istanze/bower_components
+client-istanze-v6/dist
+client-istanze-v6/node_modules
+coverage
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+config.js

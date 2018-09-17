@@ -1,3 +1,32 @@
+> Angular 6 - Electron - Bootstrap - Formly - mysql
+> from https://github.com/lbassin/electron-angular-webpack#skeleton
+> npm run dev
+>
+> npm install xml2js mysql --save
+> Formly
+> npm install @angular/forms @ngx-formly/core --save
+> npm install @ngx-formly/bootstrap --save
+> moment
+> npm install moment --save
+> ngx-spinner
+> 
+> rxjs
+> npm install rxjs
+>
+> ngx-toastr
+> npm install ngx-toastr --save
+>
+> ng-select
+> npm install --save @ng-select/ng-select
+>
+> bootstrap
+> npm install bootstrap --save
+>
+> npm install --save  ngx-feather-icon
+
+
+
+
 <p align="center">
     <img src="https://i.imgur.com/eh26WIb.png" width="750">
 </p>

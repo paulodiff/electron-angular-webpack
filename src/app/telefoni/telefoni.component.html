@@ -1,0 +1,67 @@
+<ngx-spinner
+bdColor = "rgba(51, 51, 51, 0.8)"
+size = "large"
+color = "#fff"
+type = "ball-8bits"
+></ngx-spinner>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">T___________</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+          <form name="form" 
+                (ngSubmit)="f.form.valid && onSubmit()" 
+                #f="ngForm" 
+                novalidate 
+                class="form-inline">
+        
+              <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">da data</div>
+                  </div>
+                  <input type="date" 
+                  [(ngModel)]="model.dadata" #dadata="ngModel"
+                  class="form-control" name="dadata" placeholder="Username">
+              </div>
+        
+              <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">a data</div>
+                </div>
+                <input type="date" 
+                [(ngModel)]="model.adata" #adata="ngModel"
+                class="form-control" name="adata" placeholder="Username">
+              </div>
+
+              <div class="input-group mb-2 mr-sm-2">
+                  <button type="submit" (click)="reloadData()" class="btn btn-outline-secondary">Reload</button>
+              </div>
+            
+              
+            </form>
+
+        
+        
+      </div>
+      
+    </div>
+  </div>
+
+<ngx-chartjs [data]="chartData" type="bar"></ngx-chartjs>
+<ngx-chartjs [data]="chartDataMese" type="bar"></ngx-chartjs>
+<ngx-chartjs [data]="chartDataSettimana" type="bar"></ngx-chartjs>
+
+<button (click)="openDialog()" class="btn btn-danger">openDialog</button>
+<button (click)="pdfStampa1()" class="btn btn-danger">Test stampa</button>
+<button (click)="testLoop()" class="btn btn-danger">Test loop</button>
+<button (click)="testMysql()" class="btn btn-danger">Test Mysql</button>
+
+<table class="table table-striped bg-light">
+  <tbody *ngFor="let item of items">
+      <tr>
+          <td>
+            {{item}}
+          </td>
+        </tr>
+  </tbody>
+</table>
